@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mlugg/setup-zig@v2
+        with:
+          version: 0.15.2
+      - name: deps
+        run: sudo apt-get update && sudo apt-get install -y libluajit-5.1-dev libcurl4-openssl-dev pkg-config
+      - name: test
+        run: zig build test
+      - name: build
+        run: zig build -Doptimize=ReleaseSafe

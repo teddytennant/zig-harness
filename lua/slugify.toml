@@ -1,0 +1,11 @@
+name = "slugify"
+description = "Slugify a string"
+script = "slugify.lua"
+runtime = "luajit"
+
+[parameters]
+type = "object"
+required = ["text"]
+[parameters.properties.text]
+type = "string"
+description = "Text to slugify"

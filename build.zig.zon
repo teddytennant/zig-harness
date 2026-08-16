@@ -1,0 +1,17 @@
+.{
+    .name = .zig_harness,
+    .version = "0.1.0",
+    .fingerprint = 0x4ee477bc1298beed,
+    .minimum_zig_version = "0.14.0",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "prompts",
+        "lua",
+        "LICENSE",
+        "README.md",
+        "WIZARD.md",
+    },
+}

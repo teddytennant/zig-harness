@@ -1,5 +1,11 @@
 # zig-harness
 
+**Very much a work in progress.** I'm messing around here, seeing how much of an agent harness fits in Zig. It builds, it runs, it will also fall over on you. Don't put anything you care about behind it yet.
+
+If you want a harness that actually works today, use Wizard: [github.com/teddytennant/wizard](https://github.com/teddytennant/wizard) / [wizard.teddytennant.com](https://wizard.teddytennant.com). That one is real, it's what I use every day, and it does everything this repo is fumbling toward plus a lot more.
+
+Still here? Fine.
+
 A stripped-down [Wizard](https://github.com/teddytennant/wizard) written in Zig, with LuaJIT in-process.
 
 No TUI, no GUI, no mesh, no ACP. One binary, one agent loop, the same prompts and the same everyday tools.
@@ -87,4 +93,8 @@ return wizard.read_file("out.txt")
 
 ## Status
 
-This is a working skeleton, not a Wizard replacement. Missing on purpose: TUI/GUI, MCP, fleet, mesh, self-update, deep evolve. Those belong in the Rust tree until this one earns them.
+Skeleton. Not a Wizard replacement, and honestly not close.
+
+Missing on purpose: TUI/GUI, MCP, fleet, mesh, self-update, deep evolve. Those stay in the Rust tree until this thing earns them. Missing by accident: probably a lot. Error handling is thin in places, the provider loop has only been run against a handful of endpoints, and I break the tool schemas whenever I get bored.
+
+Treat it as a sketch. Real work goes through [Wizard](https://wizard.teddytennant.com).
